@@ -1,0 +1,33 @@
+{
+  "appointments": [
+    {
+      "id": 0,
+      "doctorId": 2,
+      "start": "5/2/2024 3:00 PM"
+    },
+    {
+      "start": "2024-05-21T10:19",
+      "doctorId": 1,
+      "id": 1
+    },
+    {
+      "start": "2024-05-23T02:31:20",
+      "doctorId": 2,
+      "id": 2
+    }
+  ],
+  "doctors": [
+    {
+      "id": 0,
+      "name": "Dr Clark"
+    },
+    {
+      "id": 1,
+      "name": "Dr Smith"
+    },
+    {
+      "id": 2,
+      "name": "Dr Diaz"
+    }
+  ]
+}
