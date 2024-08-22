@@ -1,0 +1,44 @@
+{
+  "appointments": [
+    {
+      "id": "A124",
+      "customerName": "Jane Smith",
+      "carMake": "Honda",
+      "carModel": "Civic",
+      "repairType": "Brake Inspection",
+      "appointmentDate": "2024-08-26",
+      "appointmentTime": "10:30",
+      "status": "Completed"
+    },
+    {
+      "id": "A125",
+      "customerName": "Alice Johnson",
+      "carMake": "Ford",
+      "carModel": "Focus",
+      "repairType": "Transmission Service",
+      "appointmentDate": "2024-08-27",
+      "appointmentTime": "14:00",
+      "status": "Completed"
+    },
+    {
+      "id": "A126",
+      "customerName": "Bob Brown",
+      "carMake": "Chevrolet",
+      "carModel": "Malibu",
+      "repairType": "Tire Replacement",
+      "appointmentDate": "2024-08-28",
+      "appointmentTime": "08:30",
+      "status": "Cancelled"
+    },
+    {
+      "id": "A127",
+      "customerName": "Emily Davis",
+      "carMake": "Nissan",
+      "carModel": "Altima",
+      "repairType": "Engine Tune-Up",
+      "appointmentDate": "2024-08-29",
+      "appointmentTime": "11:00",
+      "status": "Completed"
+    }
+  ]
+}
