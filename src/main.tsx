@@ -2,31 +2,35 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
+import App from './App'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Dashboard from './Dashboard.tsx'
-import NewAppointmentPage from './NewAppointmentPage.tsx'
-import Layout from './Layout.tsx'
+import HomePage from './HomePage'
+import AppointmentsPage from './AppointmentsPage'
+import ColorPage from './ColorPage'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
+    element: <App/>,
     children: [
       {
         path: "/",
-        element: <div>Welcome to my website!</div>
+        element: <HomePage/>
       },
       {
-        path: "/dashboard",
-        element: <Dashboard/>
+        path: "/appointments",
+        element: <AppointmentsPage/>
       },
       {
-        path: "/newAppointment",
-        element: <NewAppointmentPage/>
+        path: "/:colorList",
+        element: <ColorPage/>
       }
     ]
   }
 ])
+
+// "/434343"
+// { colorList: "434343" }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
