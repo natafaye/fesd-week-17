@@ -1,0 +1,18 @@
+{
+  "grocery": [
+    {
+      "id": 1,
+      "name": "Raynard",
+      "pricePerUnit": 1,
+      "location": "Comedy|Romance",
+      "amount": 2
+    },
+    {
+      "id": 5,
+      "name": "Shelley",
+      "pricePerUnit": 18,
+      "location": "Comedy",
+      "amount": 3
+    }
+  ]
+}

@@ -2,35 +2,28 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
-import App from './App'
+import Layout from './Layout'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import HomePage from './HomePage'
-import AppointmentsPage from './AppointmentsPage'
-import ColorPage from './ColorPage'
+import PlanningPage from './components/PlanningPage/PlanningPage'
+import ShoppingPage, { shoppingLoader } from './components/ShoppingPage/ShoppingPage'
 
-const router = createBrowserRouter([
+let router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    Component: Layout, // The overall layout for every page in the app
     children: [
       {
         path: "/",
-        element: <HomePage/>
+        element: <PlanningPage/>,
       },
       {
-        path: "/appointments",
-        element: <AppointmentsPage/>
-      },
-      {
-        path: "/:colorList",
-        element: <ColorPage/>
+        path: "/shopping",
+        element: <ShoppingPage/>,
+        loader: shoppingLoader
       }
     ]
-  }
-])
-
-// "/434343"
-// { colorList: "434343" }
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
