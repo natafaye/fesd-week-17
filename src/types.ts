@@ -1,7 +1,6 @@
-export type ListItem = {
+export type Question = {
     id: number
-    name: string
-    pricePerUnit: number
-    location: string
-    amount: number | string
+    question: string
+    correctAnswer: string
+    answers: string[]
 }

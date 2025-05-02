@@ -2,26 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
-import Layout from './Layout'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import PlanningPage from './components/PlanningPage/PlanningPage'
-import ShoppingPage, { shoppingLoader } from './components/ShoppingPage/ShoppingPage'
+import { createBrowserRouter, RouterProvider } from 'react-router'
+import TakeQuizPage from './components/TakeQuizPage'
+import MakeQuizPage from './components/MakeQuizPage'
 
-let router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
-    Component: Layout, // The overall layout for every page in the app
-    children: [
-      {
-        path: "/",
-        element: <PlanningPage/>,
-      },
-      {
-        path: "/shopping",
-        element: <ShoppingPage/>,
-        loader: shoppingLoader
-      }
-    ]
+    element: <MakeQuizPage/>,
+  },
+  {
+    path: "/take",
+    element: <TakeQuizPage/>,
   },
 ]);
 
