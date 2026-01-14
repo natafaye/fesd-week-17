@@ -1,24 +1,46 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router'
-import TakeQuizPage from './components/TakeQuizPage'
-import MakeQuizPage from './components/MakeQuizPage'
+import { createBrowserRouter, RouterProvider } from 'react-router';
+import HomePage from './components/HomePage';
+import EmployeesPage from './components/EmployeesPage';
+import AddPaycheckPage, { employeesLoader } from './components/AddPaycheckPage';
+import Layout from './components/Layout';
+import PaychecksPage, { paychecksLoader } from './components/PaychecksPage';
+import EmployeeDetailsPage, { employeeDetailsLoader } from './components/EmployeeDetailsPage';
 
-const router = createBrowserRouter([
+let router = createBrowserRouter([
   {
     path: "/",
-    element: <MakeQuizPage/>,
-  },
-  {
-    path: "/take",
-    element: <TakeQuizPage/>,
-  },
+    Component: Layout,
+    children: [
+      {
+        path: "/",
+        Component: HomePage
+      },
+      {
+        path: "/employees",
+        Component: EmployeesPage
+      },
+      {
+        path: "/employees/:employeeId",
+        loader: employeeDetailsLoader,
+        Component: EmployeeDetailsPage
+      },
+      {
+        path: "/paychecks",
+        loader: paychecksLoader,
+        Component: PaychecksPage
+      },
+      {
+        path: "/paychecks/add",
+        loader: employeesLoader,
+        Component: AddPaycheckPage
+      },
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <RouterProvider router={router}/>
-  </React.StrictMode>,
+  <RouterProvider router={router} />
 )

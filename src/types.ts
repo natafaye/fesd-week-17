@@ -1,6 +1,12 @@
-export type Question = {
+export type Employee = {
     id: number
-    question: string
-    correctAnswer: string
-    answers: string[]
+    name: string
+    title: string
+}
+
+export type Paycheck = {
+    id: number
+    employeeId: number
+    amount: number
+    date: string
 }

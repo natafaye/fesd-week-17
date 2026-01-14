@@ -1,0 +1,46 @@
+{
+  "employees": [
+    {
+      "id": 0,
+      "name": "Natalie",
+      "title": "Instructor"
+    },
+    {
+      "id": 1,
+      "name": "Michael",
+      "title": "TA"
+    }
+  ],
+  "paychecks": [
+    {
+      "id": 0,
+      "employeeId": 0,
+      "amount": 10000000,
+      "date": "1/13/26"
+    },
+    {
+      "employeeId": 1,
+      "amount": 10000000,
+      "date": "1/13/28",
+      "id": 1
+    },
+    {
+      "employeeId": null,
+      "amount": 1000000,
+      "date": "1/20/26",
+      "id": 2
+    },
+    {
+      "employeeId": null,
+      "amount": 50,
+      "date": "1/13/26",
+      "id": 3
+    },
+    {
+      "employeeId": 0,
+      "amount": 50,
+      "date": "1/13/26",
+      "id": 4
+    }
+  ]
+}
